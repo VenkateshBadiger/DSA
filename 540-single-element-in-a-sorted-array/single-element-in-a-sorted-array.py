@@ -1,12 +1,21 @@
+from typing import List
+
 class Solution:
     def singleNonDuplicate(self, nums: List[int]) -> int:
-        l, r = 0, len(nums) - 1
-        while l < r:  
-            m = (l + r) // 2
-            if m % 2 == 1:
-                m -= 1
-            if nums[m] == nums[m + 1]:
-                l = m + 2
-            else:
-                r = m
-        return nums[l]
+        n = len(nums)
+
+
+        if n == 1:
+            return nums[0]
+
+        if nums[0] != nums[1]:
+            return nums[0]
+
+      
+        if nums[n-1] != nums[n-2]:
+            return nums[n-1]
+
+        
+        for i in range(1, n-1):
+            if nums[i] != nums[i-1] and nums[i] != nums[i+1]:
+                return nums[i]
