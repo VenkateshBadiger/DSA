@@ -5,6 +5,7 @@
 #         self.next = next
 class Solution:
     def isPalindrome(self, head: Optional[ListNode]) -> bool:
+        # Make a list of values and compare with its reverse 
         values = []
         cur = head
         while cur:
@@ -12,7 +13,9 @@ class Solution:
             cur = cur.next
 
         return values == values[::-1]
+        
         """
+        # Find the middle first. Reverse the elements after middle and then check from the start if the values are same on left and right.
         if head is None or head.next is None:
             return True
         
