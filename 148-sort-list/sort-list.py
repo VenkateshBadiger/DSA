@@ -5,6 +5,23 @@
 #         self.next = next
 class Solution:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        if  head is None or head.next is None:
+            return head
+        
+        arr = []
+        curr = head
+        while curr:
+            arr.append(curr.val)
+            curr = curr.next
+        arr.sort()
+        curr = head
+        for val in arr:
+            curr.val = val
+            curr = curr.next
+        return head
+
+        
+        '''
         # Get the middle of the list. then split the list. Make  them into left and right list. Recursive call on the main function on left and right  
         
         if  head is None or head.next is None:
@@ -41,6 +58,6 @@ class Solution:
             result = right
             result.next = self.merge(left,result.next)
         return result 
-
+        '''
 
         
