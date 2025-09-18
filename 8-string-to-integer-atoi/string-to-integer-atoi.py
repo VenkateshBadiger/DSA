@@ -23,16 +23,6 @@ class Solution:
             return 2**31-1
         
         return result
-
-        # Simple Explaination (Venky):
-        # 1. Use .strip() to remove the spaces on each side
-        # 2. Check for "-" or "+" sign and store SIGN 
-        # 3. Iterate through the string check if Character is a DIGIT (Stop at non character string)
-        # 4. Multiply result with the Sign 
-        # 5. Check if they are in the boundary
-
+         
         
 
-
-            
-        
