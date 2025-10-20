@@ -1,5 +1,8 @@
 class MinStack:
-
+    # Use two stacks — one normal and one for minimums (smaller nums on the TOP).
+    # When pushing, if the value ≤ current min, also push it to min_stack.
+    # On pop, if the popped value equals the min’s top, pop it from min_stack too.
+    # The top of min_stack always gives the current minimum.
     def __init__(self):
         self.stack = []
         self.min_stack = []
