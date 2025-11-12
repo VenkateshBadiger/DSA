@@ -1,19 +1,21 @@
+from collections import deque 
+
 class MyStack:
 
     def __init__(self):
-        self.stack = []
+        self.stack = deque()
 
     def push(self, x: int) -> None:
         self.stack.append(x)
 
     def pop(self) -> int:
         if self.empty():
-            return []
+            return None
         return self.stack.pop()
 
     def top(self) -> int:
         if self.empty():
-            return []
+            return None
         return self.stack[-1]
 
     def empty(self) -> bool:
