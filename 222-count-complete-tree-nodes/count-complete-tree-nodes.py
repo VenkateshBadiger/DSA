@@ -6,7 +6,10 @@
 #         self.right = right
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
-        if root == None:
+        return 0 if root is None else 1 + self.countNodes(root.left) + self.countNodes(root.right)
+
+'''   
+     if root == None:
             return 0
         left_height = self.left_h(root)
         right_height = self.right_h(root)
@@ -30,7 +33,7 @@ class Solution:
             h +=1
             node = node.right
         return h
-
+'''
 '''
 class Solution:
     def countNodes(self, root: Optional[TreeNode]) -> int:
