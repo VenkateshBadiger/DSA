@@ -13,14 +13,3 @@ class Solution:
             else: 
                 j=j-1
         return max_area
-
-
-
-
-        #for i in range(n):
-        #    b1=height[i]
-        #    for j in range(i+1,n):
-        #        b2=height[j]
-        #        area=min(b1,b2)*(j-i) 
-        #        max_area=max(max_area, area)
-        #return max_area
