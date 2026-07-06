@@ -15,3 +15,4 @@ SELECT s.user_id, ROUND(COALESCE(cr.con_req/r.req, 0),2) confirmation_rate
 FROM Signups s
 LEFT JOIN req r on r.user_id = s.user_id
 LEFT JOIN con_req cr on cr.user_id = s.user_id
+
