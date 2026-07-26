@@ -1,6 +1,7 @@
 class Solution:
     def gameOfLife(self, board: List[List[int]]) -> None:
 # Make a new matrix named old, use it to parse using directions and count the lives 
+# CAUTION : Around the corners and edges the value of i,j can go negative
 # After u count the lives u can start making the changes in the board  
         m = len(board)
         n = len(board[0])
