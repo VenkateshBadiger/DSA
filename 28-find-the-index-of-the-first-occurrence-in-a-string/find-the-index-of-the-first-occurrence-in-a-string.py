@@ -1,5 +1,6 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
+# With n-m+1 we are kinda not considering the last m characters as when we reach n-m th character we compare them already 
         if needle not in haystack:
             return -1
         elif needle: 
