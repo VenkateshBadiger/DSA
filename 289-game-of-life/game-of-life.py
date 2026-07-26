@@ -1,9 +1,13 @@
 class Solution:
     def gameOfLife(self, board: List[List[int]]) -> None:
+# Make a new matrix named old, use it to parse using directions and count the lives 
+# After u count the lives u can start making the changes in the board  
         m = len(board)
         n = len(board[0])
         old = [row[:] for row in board]
-        directions = [(-1,-1),(-1,0),(-1,1),(0,-1),(0,1),(1,-1),(1,0),(1,1)]
+        directions = [(-1,-1),(-1,0),(-1,1),
+                      (0,-1),         (0,1),
+                      (1,-1),  (1,0), (1,1)]
         for i in range(m):
             for j in range(n):
                 lives = 0
