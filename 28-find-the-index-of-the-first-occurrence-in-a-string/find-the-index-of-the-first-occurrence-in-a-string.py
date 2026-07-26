@@ -1,5 +1,11 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
-# string.find(substring)
-        index = haystack.find(needle)
-        return index
+        if needle not in haystack:
+            return -1
+        elif needle: 
+            n = len(haystack)
+            m = len(needle)
+            for i in range(n):
+                if haystack[i] == needle[0] and haystack[i:i+m]== needle:
+                    return i
+                    
